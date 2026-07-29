@@ -76,6 +76,24 @@ conda activate ./env
 sbatch submit_lanta.sh
 ```
 
+### ขั้นตอนที่ 3: ตรวจสอบ Log และค้นหา GPU Node ID
+```bash
+tail -f tts_finetune_*.log
+```
+
+### ขั้นตอนที่ 4: เชื่อมต่อ Jupyter Lab ผ่าน SSH Tunneling (Port Forwarding)
+
+**โครงสร้างคำสั่ง:**
+```bash
+ssh -L 8888:gpu-id:8888 userxxx@lanta.nstda.or.th
+```
+
+**ตัวอย่างการใช้งาน:**
+```bash
+ssh -L 8888:x1001c2s2b0n0:8888 userxxx@lanta.nstda.or.th
+```
+> หลังทำ SSH Tunnel สามารถเปิดเบราว์เซอร์บนเครื่องของท่านไปที่ `http://localhost:8888` เพื่อใช้งาน Jupyter Lab ได้ทันที
+
 ---
 
 ## 📄 ใบอนุญาต (License)
