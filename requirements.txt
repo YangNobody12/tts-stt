@@ -11,6 +11,8 @@ huggingface_hub>=0.34.0
 sentencepiece
 protobuf
 hf_transfer
+tqdm
+
 
 # Fine-tuning & Acceleration (Unsloth Stack)
 unsloth
@@ -30,3 +32,8 @@ librosa
 # Evaluation Metrics for Speech (WER / STT Evaluation)
 evaluate
 jiwer
+
+# Jupyter Environment & Progress Widgets
+jupyterlab
+ipywidgets
+
